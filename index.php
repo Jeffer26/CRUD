@@ -8,11 +8,12 @@ $PDO = conecta_bd();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tela principal</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <h1>Cadastro de livros</h1>
   <p><a href="cadastro.html">Adicionar livro</a></p>
-  <h2>Lista de livros cadastrados</h2>
+  <h2 >Lista de livros cadastrados</h2>
   <?php
   $stmt_count = $PDO->prepare("SELECT COUNT(*) As total FROM livros");
   $stmt_count->execute();
